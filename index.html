@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>YourSafePassword</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&display=swap" />
+</head>
+<body>
+    <div class="container">
+        <h1 class="yoursafepassword">Your<span class="safe">Safe</span>Password</h1>
+        <div class="generator">
+            <h2 class="generate-your-password">Generate Your Password</h2>
+            <div class="controls">
+                <button class="btn lowercase active" onclick="toggleActive(this)">Lowercase</button>
+                <button class="btn uppercase active" onclick="toggleActive(this)">Uppercase</button>
+                <button class="btn numbers active" onclick="toggleActive(this)">Numbers</button>
+                <button class="btn symbols active" onclick="toggleActive(this)">Symbols</button>
+            </div>
+            <div class="password-length-container">
+                <input type="range" class="password-length" min="1" max="99" value="20" oninput="updateLengthValue(this.value)">
+                <span id="length-value">20</span>
+            </div>
+            <div class="generated-password"></div>
+            <div class="button-group">
+                <button class="btn generate" onclick="generatePassword()">Generate</button>
+                <button class="btn copy" onclick="copyToClipboard()">Copy</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>Website designed and developed by Patreik0
+            <a href="mailto:patreikszy@gmail.com">
+                <br>E-mail: patreikszy@gmail.com
+            </a>
+        </p>
+    </footer>
+</body>
+</html>
